@@ -1,6 +1,6 @@
 /* transpose table from long_form to wide_form, e.g. ID, day, price -> ID, price_1, ..., price_99 */
 
-proc transpose data=long_data out=wide_data prefix=balance;
+proc transpose data=long_data out=wide_data prefix=price;
     by ID ;
     id day;
     var price;
