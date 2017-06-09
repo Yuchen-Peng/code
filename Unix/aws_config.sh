@@ -2,7 +2,7 @@
 sudo yum install -y git
 
 #proxy, in case needed
-curl https://github.kdc.capitalone.com/raw/dustin/dotfiles/master/proxy_scripts/aws_proxies.sh >> ~/proxies.sh
+curl https://github.com/peng19880925/code/blob/master/Unix/aws_proxies.sh >> ~/proxies.sh
 echo "source ~/proxies.sh" >> ~/.bash_profile
 
 source ~/.bash_profile
