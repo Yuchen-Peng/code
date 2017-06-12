@@ -2,7 +2,7 @@ This repo reviews using databricks
 
 # Apache Spark
 
-
+Apache Spark is a sophisticated distributed computation framework for executing code in parallel across many different machines. 
 
 # Databricks
 
