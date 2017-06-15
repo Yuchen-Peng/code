@@ -19,3 +19,10 @@ Databricks is a managed platform for running Apache Spark.
 Databricks enables the separation of notebooks and clusters. One creates notebooks and saves in workspace; one creates clusters to run the notebooks; these notebooks can be attached to (and detached from) any cluster created.
 
 
+## To install package (on cluster)
+
+```sh
+%sh /databricks/python/bin/pip install package_name
+```
+
+## To 
