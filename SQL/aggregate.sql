@@ -15,3 +15,10 @@ avg(zeroifnull(house_price)) as avg_price
 from my_table
 
 group by county;
+
+select 
+date_application_received, 
+count(application_id) as count 
+from apps_table  
+group by 1 
+order by date_application_received asc
