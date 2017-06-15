@@ -16,6 +16,6 @@ Databricks is a managed platform for running Apache Spark.
  - **Table**: to store data for **notebook** to read, usually in S3.
  - **Clusters**: set of computers to execute code from **notebook** on **table**.
  
-Databricks 
+Databricks enables the separation of notebooks and clusters. One creates notebooks and saves in workspace; one creates clusters to run the notebooks; these notebooks can be attached to (and detached from) any cluster created.
 
 
