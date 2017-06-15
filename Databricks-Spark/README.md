@@ -18,6 +18,12 @@ Databricks is a managed platform for running Apache Spark.
  
 Databricks enables the separation of notebooks and clusters. One creates notebooks and saves in workspace; one creates clusters to run the notebooks; these notebooks can be attached to (and detached from) any cluster created.
 
+## dbutils.fs: the filesystem utility
+
+```sh
+dbutils.fs.ls('s3a://da-databricks-training/SparkEssentials')
+%fs ls 's3a://da-databricks-training/SparkEssentials'
+```
 
 ### To install package (on cluster)
 
