@@ -27,7 +27,7 @@ Databricks enables the separation of notebooks and clusters. One creates noteboo
 
 ### To read data from S3 (bucket policy need to be added in AWS console) as a spark dataframe
 
-```spark
+```python
 df = spark.read.parquet('s3a://s3_bucket_name/path/filename')  # to read parquet
 df = spark.read.csv('s3a://s3_bucket_name/path/filename.csv', inferSchema=True, header=True) # to read csv
 ```
