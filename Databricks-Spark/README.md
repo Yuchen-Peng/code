@@ -21,7 +21,7 @@ Databricks enables the separation of notebooks and clusters. One creates noteboo
 
 ## To install package (on cluster)
 
-```sh
+```shell
 %sh /databricks/python/bin/pip install package_name
 ```
 
