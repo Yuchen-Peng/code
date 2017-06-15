@@ -19,10 +19,15 @@ Databricks is a managed platform for running Apache Spark.
 Databricks enables the separation of notebooks and clusters. One creates notebooks and saves in workspace; one creates clusters to run the notebooks; these notebooks can be attached to (and detached from) any cluster created.
 
 
-## To install package (on cluster)
+### To install package (on cluster)
 
 ```sh
 %sh /databricks/python/bin/pip install package_name
 ```
 
-## To 
+### To read data from S3 (bucket policy need to be added in AWS console) as a spark dataframe
+
+```spark
+df = spark.read.parquet('s3a://s3_bucket_name/path/filename')  # to read parquet
+df = spark.read.csv('s3a://s3_bucket_name/path/filename.csv', inferSchema=True, header=True) # to read csv
+```
