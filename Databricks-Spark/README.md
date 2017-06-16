@@ -33,6 +33,12 @@ The two lines above are equivalent. By typing ```%fs``` on enables dbutils in th
 %sh /databricks/python/bin/pip install package_name
 ```
 
+### To run stored notebook
+
+```sh
+%run "/Users/path/notebook_name"
+```
+
 ## Spark dataframe
 
 ### To read data from S3 (bucket policy need to be added in AWS console) as a spark dataframe
