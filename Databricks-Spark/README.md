@@ -19,7 +19,7 @@ Databricks is a managed platform for running Apache Spark.
  
 Databricks enables the separation of notebooks, clusters and data. One creates notebooks and saves in workspace; one creates clusters to run the notebooks; these notebooks can be attached to (and detached from) any cluster created. Data are stored on S3 and can be read to cluster, or be cached to cluster SSD by using DBFS.
 
-### dbutils.fs ##: to access DBFS
+### dbutils.fs: to access DBFS
 e.g. to list files under an S3 folder
 ```sh
 dbutils.fs.ls('s3a://path/folder')
