@@ -51,6 +51,7 @@ df = spark.read.parquet('s3a://s3_bucket_name/path/filename')
 Some descriptive code:
 ```python
 df.head(k) # the first k records 
+df.show(k) # the first k row, prettier look
 df.printSchema() # prints out the schema for the DataFrame, the data types for each column and whether a column can be null
 df.count() # return the number of rows
 display(df) # print the dataframe as a table
