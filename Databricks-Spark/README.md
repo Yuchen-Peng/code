@@ -48,6 +48,7 @@ df.head(k) # the first k records
 df.printSchema() # prints out the schema for the DataFrame, the data types for each column and whether a column can be null
 df.count() # return the number of rows
 display(df) # print the dataframe as a table
+df.select('category_col').distinct().count() # count number of different categories in a column
 ```
 
 To read csv format table one needs to specify the schema of the table. Spark enables automatical schema infer by looking at the table, by setting the argument ```inferSchema=Ture``` (which takes time for big table).
@@ -85,6 +86,18 @@ df_sample = spark.read.csv('s3a://s3_bucket_name/path/sample_table.csv', inferSc
 schema_json = df_sample.schema.json()
 schema = typ.StructType.fromJson(json.loads(schema_json))
 df = df = spark.read.csv('s3a://s3_bucket_name/path/big_table.csv', schema=schema, inferSchema=False, header=True) 
+```
+
+To write dataframe to S3
+```python
+df.write.format("csv").option("header","true").save("s3a://path/table.csv")
+df.write.parquet("s3a://path/table.parquet")
+```
+
+One can also partition a big table into pieces by a certain column
+```python
+df_part = df.repartition("col_bkt")
+df_part.write.partitionBy('col_bkt').parquet("s3a://path/table.parquet")
 ```
 
 ### look at 
