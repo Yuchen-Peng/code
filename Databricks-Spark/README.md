@@ -128,7 +128,7 @@ apps_df_fico = apps_df.filter(apps_df['APP_AVG_FICO']>700)
 display(apps_df_fico.orderBy('APP_AVG_FICO', ascending=False))
 ```
 
-### Create SQL table
+### Create SQL table from dataframe
 ```python
 df.createOrReplaceTempView("sql_table")
 %sql select * from sql_table limit 10;   # we can run SQL now
@@ -144,5 +144,17 @@ df.write \
   .option("dbtable", "my_table_copy") \
   .option("tempdir", "s3a://path/for/temp/data") \
   .mode("error") \
+  .save()
+```
+
+#### To write SQL table to Redshift
+
+```python
+sqlContext.sql("select * from sql_table")
+  .write
+  .format("com.databricks.spark.redshift")
+  .option("url", "jdbc:redshift://redshifthost:5439/database?user=username&password=pass") // 
+  .option("tempdir", "s3a://path/for/temp/data") //
+  .option("dbtable", "my_table_copy") // 
   .save()
 ```
