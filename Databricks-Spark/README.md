@@ -136,13 +136,35 @@ df.createOrReplaceTempView("sql_table")
 
 ### Dataframe vs. Redshift
 
+```python
+'''
+These may vary for different configuration
+'''
+s3temp = "s3a://path/for/temp/data"
+jdbc_url = "jdbc:redshift://redshifthost:5439/database?user=username&password=pass"
+```
+
+#### To read from Redshift to dataframe
+
+```python
+select_query = '''SELECT acct_id from redshift_table'''
+
+df = spark.read.format("com.databricks.spark.redshift")\
+                        .option("url", jdbc_url)\
+                        .option("tempdir", s3temp)\
+                        .option("query", select_query)\
+                        .option("forward_spark_s3_credentials", "true")\
+                        .load()
+```
+
+
 #### To write dataframe to Redshift
 ```python
 df.write \
   .format("com.databricks.spark.redshift") \
-  .option("url", "jdbc:redshift://redshifthost:5439/database?user=username&password=pass") \
+  .option("url", jdbc_url) \
   .option("dbtable", "my_table_copy") \
-  .option("tempdir", "s3a://path/for/temp/data") \
+  .option("tempdir", s3temp) \
   .mode("error") \
   .save()
 ```
@@ -153,8 +175,8 @@ df.write \
 sqlContext.sql("select * from sql_table")
   .write
   .format("com.databricks.spark.redshift")
-  .option("url", "jdbc:redshift://redshifthost:5439/database?user=username&password=pass") // 
-  .option("tempdir", "s3a://path/for/temp/data") //
+  .option("url", jdbc_url) // 
+  .option("tempdir", s3temp) //
   .option("dbtable", "my_table_copy") // 
   .save()
 ```
