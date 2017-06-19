@@ -135,3 +135,14 @@ df.createOrReplaceTempView("sql_table")
 ```
 
 ### Dataframe vs. Redshift
+
+#### To write dataframe to Redshift
+```python
+df.write \
+  .format("com.databricks.spark.redshift") \
+  .option("url", "jdbc:redshift://redshifthost:5439/database?user=username&password=pass") \
+  .option("dbtable", "my_table_copy") \
+  .option("tempdir", "s3a://path/for/temp/data") \
+  .mode("error") \
+  .save()
+```
