@@ -133,3 +133,5 @@ display(apps_df_fico.orderBy('APP_AVG_FICO', ascending=False))
 df.createOrReplaceTempView("sql_table")
 %sql select * from sql_table limit 10;   # we can run SQL now
 ```
+
+### Dataframe vs. Redshift
