@@ -28,6 +28,7 @@ git status # to check repo status
 
 # first, add remote from original repository in your forked repository as upstream:
 git remote add upstream https://github.com/REPO-YOU-FORKED-FROM.git
+# also use this when git cannot configure upstream
 git fetch upstream
 # then update the forked repo from the upstream
 git pull upstream master
