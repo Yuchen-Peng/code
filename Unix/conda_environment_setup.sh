@@ -1,8 +1,4 @@
-export LOB="/us/card/cca/non_npi"
-export USER="eid"
-mkdir /prod/user/sam/$LOB/$USER/python
-mkdir /prod/user/sam/$LOB/$USER/python/conda_envs
-conda config --add envs_dirs /prod/user/sam/$LOB/$USER/python/conda_envs
+
 conda create -n dp_env python=3.5 bokeh seaborn jupyter ipywidgets pyodbc teradata pandas pyodbc python-dateutil 
 #Python 3.5
 
@@ -14,4 +10,4 @@ source activate dp_env
 
 conda create env
 #create virtual environment
-source active env
+source activate env
