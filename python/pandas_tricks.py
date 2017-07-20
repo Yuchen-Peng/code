@@ -11,4 +11,4 @@ ser, bins = pd.qcut(df_ben["A"], 5, retbins=True, labels=False) # here bins is a
 pd.cut(df_new["A"], bins=bins, labels=False, include_lowest=True)
 
 # count in bins
-bin_count = pd.qcut(df_ben["A"], 5).value_counts
+bin_count = pd.qcut(df_ben["A"], 5).value_counts()
