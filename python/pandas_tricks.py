@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 # create a dataframe which contains multiple groupby
 df_groupby = df.groupby([col1, col2]).agg(['mean', 'count','std', 'min', 'max'])
 
@@ -43,3 +46,12 @@ dtype: float64
  # sum over multiple column
  col_list_2015=list(df_houseprice[['2015-01','2015-02','2015-03','2015-04','2015-05','2015-06','2015-07','2015-08','2015-09','2015-10','2015-11','2015-12']])
  df_houseprice['avg_price_2015'] = 1/12*df_houseprice_141516[col_list_2015].sum(axis=1)
+ 
+ # time stamp
+ 
+from datetime import datetime
+pd.Timestamp(datetime(2012, 5, 1))
+Timestamp('2012-05-01 00:00:00')
+
+# str date to datetime type
+df['date_time'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
