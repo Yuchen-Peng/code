@@ -7,3 +7,8 @@ conda install -n virtualenv [package_name] # to install new package in virtualen
 source deactivate # to deactivate
 
 
+# other examples
+
+conda create --name python35 --no-default-packages --no-pin python=3.5
+
+conda create --name python3 python=3
