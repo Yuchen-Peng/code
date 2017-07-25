@@ -47,6 +47,14 @@ dtype: float64
  col_list_2015=list(df_houseprice[['2015-01','2015-02','2015-03','2015-04','2015-05','2015-06','2015-07','2015-08','2015-09','2015-10','2015-11','2015-12']])
  df_houseprice['avg_price_2015'] = 1/12*df_houseprice_141516[col_list_2015].sum(axis=1)
  
+ # fillna for missing 
+ 
+ df.fillna(0)
+ df.fillna(method='ffill') / df.fillna(method='bfill') # Fill gaps forward or backward
+ 
+ df.dropna()
+ df.dropna(how='all') # only drop rows with all data missing
+ 
  # time stamp
  
 from datetime import datetime
