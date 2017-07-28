@@ -63,3 +63,7 @@ Timestamp('2012-05-01 00:00:00')
 
 # str date to datetime type
 df['date_time'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
+
+# dataframe groupby aggregation: mean, std
+df = pd.DataFrame({'A':[1,1,2,2],'B':[1,2,1,2],'values':np.arange(10,30,5)})
+df.groupby('A').agg(np.std)
