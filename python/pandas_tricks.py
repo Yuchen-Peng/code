@@ -76,3 +76,9 @@ df1['Segment'] = 'lalala'
 cols = df1.columns.tolist()
 cols = cols[-1:] + cols[:-1]
 df1_new = df1[cols]
+
+# Create dataframe from dictionary of dictionaries
+movie_dict = {'Jill': {'Django Unchained': 6.5, 'Gone Girl': 9.0, 'Kill the Messenger': 8.0, 'Avenger: Age of Ultron': 7.0}, 'Toby': {'Django Unchained': 9.0, 'Zoolander': 2.0, 'Avenger: Age of Ultron': 8.5}}
+movie_df = pd.DataFrame.from_dict(movie_dict, orient='index') # with movie_dict.keys to be the index
+movie_df.index.name = 'Name' # Set the index to be the first column
+movie_df = movie_df.reset_index()
