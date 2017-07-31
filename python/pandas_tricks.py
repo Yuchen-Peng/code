@@ -68,3 +68,11 @@ df['date_time'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
 df = pd.DataFrame({'A':[1,1,2,2],'B':[1,2,1,2],'values':np.arange(10,30,5)})
 df.groupby('A').agg(np.std)
 value_std = df.groupby('A').agg(np.std)['values'].values # return the std's group by A as an array
+
+# Re-order columns
+dict1 = {'a':[1,2],'b':[0,10]}
+df1 = pd.DataFrame(dict1)
+df1['Segment'] = 'lalala'
+cols = df1.columns.tolist()
+cols = cols[-1:] + cols[:-1]
+df1_new = df1[cols]
