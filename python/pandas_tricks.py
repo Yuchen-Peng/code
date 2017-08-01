@@ -82,3 +82,22 @@ movie_dict = {'Jill': {'Django Unchained': 6.5, 'Gone Girl': 9.0, 'Kill the Mess
 movie_df = pd.DataFrame.from_dict(movie_dict, orient='index') # with movie_dict.keys to be the index
 movie_df.index.name = 'Name' # Set the index to be the first column
 movie_df = movie_df.reset_index()
+
+# Create dataframe from list of dictionaries
+list_rows = []
+for i in range(5):
+    dict1 = {'A':i,'B':i+1}
+    list_rows.append(dict1)
+df_fromlist = pd.DataFrame(list_rows) 
+df_fromlist
+Out[4]: 
+   A   B
+0  0   1
+1  1   2
+2  2   3
+3  3   4
+4  4   5
+
+
+
+
