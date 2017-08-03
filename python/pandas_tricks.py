@@ -106,4 +106,11 @@ for index, val in s.iteritems():
 #series (such as value.counts())to dataframe
 dataframe[column].value_counts().to_frame()
 
+#subset a dataframe, with value in/not in a list
+df = pd.DataFrame({'countries':['US','UK','Germany','China','Japan']})
+asian_countries = ['Japan','China']
+
+df[df.countries.isin(asian_countries)]
+df[~df.countries.isin(asian_countries)]
+
 
