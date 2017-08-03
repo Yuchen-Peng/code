@@ -98,6 +98,12 @@ Out[4]:
 3  3   4
 4  4   5
 
+#iterate through index and column value
+s = df[var].value_counts()
+for index, val in s.iteritems():
+    print index, val
 
+#series (such as value.counts())to dataframe
+dataframe[column].value_counts().to_frame()
 
 
