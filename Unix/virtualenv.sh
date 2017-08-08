@@ -12,3 +12,4 @@ source deactivate # to deactivate
 conda create --name python35 --no-default-packages --no-pin python=3.5
 
 conda create --name python3 python=3
+# python3 virtualenv has many packages installed now for python 3
