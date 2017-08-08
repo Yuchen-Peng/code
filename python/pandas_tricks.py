@@ -113,4 +113,6 @@ asian_countries = ['Japan','China']
 df[df.countries.isin(asian_countries)]
 df[~df.countries.isin(asian_countries)]
 
-
+# subset a dataframe, with column contains a particular string
+df = pd.DataFrame({'a':['abc','efg'],'b':[0,10]})
+df[df['a'].str.contains('abc')]
