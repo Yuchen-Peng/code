@@ -1,4 +1,7 @@
 from weasyprint import HTML
+import pandas as pd
+import datetime
+
 current_time = datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 time = '<h2>' + 'Report created: ' + current_time + '</h2>'
 title1 = '<h1>' +'Report blablalbla' + '</h1>'
