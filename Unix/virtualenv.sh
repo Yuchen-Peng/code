@@ -11,7 +11,7 @@ source deactivate # to deactivate
 
 conda create --name python35 --no-default-packages --no-pin python=3.5
 
-conda create --name python3 python=3
+conda create --name python3 python=3.5
 # python3 virtualenv has many packages installed now for python 3
 source activate python3
 pip install pandas
@@ -22,4 +22,6 @@ pip install pyodbc
 pip install datetime
 pip install seaborn
 pip install matplotlib
+pip install requests
+pip install virtualenv
 ipython3 kernelspec install-self # install notebook kernel for python 3
