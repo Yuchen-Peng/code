@@ -15,6 +15,7 @@ conda create --name python3 python=3.5
 # python3 virtualenv has many packages installed now for python 3
 source activate python3
 pip install pandas
+pip install --upgrade xlrd # fix xlsx reading error
 pip3 install jupyter
 pip install weasyprint
 pip install ast
