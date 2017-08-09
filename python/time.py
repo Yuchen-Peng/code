@@ -1,3 +1,3 @@
-from time import gmtime, strftime
-strftime("%Y-%m-%d %H:%M:%S", gmtime()) #now
->>> '2017-08-08 15:43:43'
+import datetime
+datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S') # now
+'2017-08-09 09:30:41'
