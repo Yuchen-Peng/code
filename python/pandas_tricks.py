@@ -14,7 +14,9 @@ ser, bins = pd.qcut(df_ben["A"], 5, retbins=True, labels=False) # here bins is a
 pd.cut(df_new["A"], bins=bins, labels=False, include_lowest=True)
 
 # count in bins
-bin_count = pd.qcut(df_ben["A"], 5).value_counts()
+bin_count = pd.qcut(df_ben["A"], 5)["A"].value_counts()
+bin_count = df_ben["A"].value_counts(bins = bins) # here bins is the bins created
+# specify value_counts(sort=False) if loop through value_counts is needed
 
 # object / str missing to float
  s
