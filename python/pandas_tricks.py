@@ -20,7 +20,7 @@ bin_count = df_ben["A"].value_counts(bins = bins) # here bins is the bins create
 
 # duplicates = 'drop' will sometimes create less than specified bins if bin edges are not unique
 # available for pandas version >= 0.20.0
-ben_count = pd.qcut(df[var],5,duplicates='drop').value_counts(sort=False)
+bin_count = pd.qcut(df[var],5,duplicates='drop').value_counts(sort=False)
 
 # object / str missing to float
  s
