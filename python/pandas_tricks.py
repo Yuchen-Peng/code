@@ -1,4 +1,5 @@
 import pandas as pd
+pd.__version__
 import numpy as np
 
 # create a dataframe which contains multiple groupby
