@@ -23,6 +23,7 @@ pip install pyodbc
 pip install datetime
 pip install seaborn
 pip install matplotlib
+pip install mpld3
 pip install requests
 pip install virtualenv
 ipython3 kernelspec install-self # install notebook kernel for python 3
