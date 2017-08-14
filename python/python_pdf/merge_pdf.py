@@ -1,4 +1,5 @@
-from pyPdf import PdfFileWriter, PdfFileReader
+# from pyPdf import PdfFileWriter, PdfFileReader for python 2
+from PyPDF2 import PdfFileWriter, PdfFileReader
 
 # Creating a routine that appends files to the output file
 def append_pdf(input,output):
