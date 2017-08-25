@@ -123,3 +123,11 @@ df[~df.countries.isin(asian_countries)]
 # subset a dataframe, with column contains a particular string
 df = pd.DataFrame({'a':['abc','efg'],'b':[0,10]})
 df[df['a'].str.contains('abc')]
+
+#visualization
+import matplotlib.pyplot as plt
+%matplotlib inline # always include this in a notebook to display figures in the notebook
+
+ax1 = df['value'].plot.kde() # e.g. plot density
+ax1.set_xlabel('value')
+ax1.set_ylabel('Frequency')
