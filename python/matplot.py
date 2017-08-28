@@ -23,7 +23,7 @@ for category in category_lst:
     ax.set_ylabel('Count')
     plt.show()
     
-# plot in a loop, grab in one subplot
+# plot in a loop, multiple subplots in one big plot
 
 category_lst = df['category'].value_counts().index.tolist()
 #suppose we have 9 categories
