@@ -105,6 +105,13 @@ Out[4]:
 3  3   4
 4  4   5
 
+#output index of a series (to list, e.g.)
+s1.index.tolist()
+#e.g. output the index of value_counts
+count = df['category'].value_counts()
+count[0:10].index.tolist()
+
+
 #iterate through index and column value
 s = df[var].value_counts()
 for index, val in s.iteritems():
