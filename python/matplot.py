@@ -14,3 +14,11 @@ plt.grid(True)
 plt.show()
 
 #plot in a loop
+
+category_lst = df['category'].value_counts().index.tolist()
+
+for category in category_lst:
+    ax = df[df['category'] == category]['value'].plot.hist(bins = 10)
+    ax.set_xlabel('value, %s category' %category)
+    ax.set_ylabel('Count')
+    plt.show()
