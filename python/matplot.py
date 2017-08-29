@@ -2,6 +2,18 @@ from matplotlib import pyplot as plt
 import numpy as np
 %matplotlib inline # always include this in a notebook to display figures in the notebook
 
+# Notation on scatter points
+x=np.random.uniform(0,1,5)
+y=np.random.uniform(0,1,5)
+note=['p1','p2','p3','p4','p5']
+
+fig, ax = plt.subplots()
+ax.scatter(x, y)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+for i, txt in enumerate(note):
+    ax.annotate(txt, (x[i],y[i]))
+
 #plot function
 t = np.arange(0.0, 2.0, 0.01)
 s = 1 + np.sin(2*np.pi*t)
