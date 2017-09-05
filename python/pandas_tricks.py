@@ -2,6 +2,9 @@ import pandas as pd
 pd.__version__
 import numpy as np
 
+# check categorical variables: what are the unique categories.
+df['category'].unique()
+
 # create a dataframe which contains multiple groupby
 df_groupby = df.groupby([col1, col2]).agg(['mean', 'count','std', 'min', 'max'])
 
