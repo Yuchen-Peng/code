@@ -142,5 +142,8 @@ ax1 = df['value'].plot.kde() # e.g. plot density
 ax1.set_xlabel('value')
 ax1.set_ylabel('Frequency')
 
-# plot scatter matrix
+# plot scatter matrix; by default diagonal is histogram chart
+# for classification, here c = y_train means using the target value to represent different colors
 scatter = pd.scatter_matrix(X_train, c= y_train, marker = 'o', s=40, hist_kwds={'bins':15}, figsize=(5,5))
+# for continuous variables, here diagnal is kde; alpha is a number between 0 and 1 standing for the transparency of figure. 
+scatter = pd.scatter_matrix(X_train, alpha=0.2, figsize=(6, 6), diagonal='kde')
