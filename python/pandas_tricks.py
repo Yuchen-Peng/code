@@ -141,3 +141,6 @@ import matplotlib.pyplot as plt
 ax1 = df['value'].plot.kde() # e.g. plot density
 ax1.set_xlabel('value')
 ax1.set_ylabel('Frequency')
+
+# plot scatter matrix
+scatter = pd.scatter_matrix(X_train, c= y_train, marker = 'o', s=40, hist_kwds={'bins':15}, figsize=(5,5))
