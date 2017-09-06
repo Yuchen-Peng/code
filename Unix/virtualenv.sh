@@ -1,3 +1,5 @@
+conda info --envs # list all created environment
+
 conda create -n virtualenv python=3.6 anaconda
 
 source activate virtualenv
