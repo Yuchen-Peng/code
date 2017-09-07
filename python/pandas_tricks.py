@@ -2,6 +2,13 @@ import pandas as pd
 pd.__version__
 import numpy as np
 
+# describe stats on a dataframe, let's add more quantile values to show
+df.describe(percentiles=[.1,.25, .5, .75,.90,.99])
+
+# add a new "index" (same as add a new row) to a df: use .loc
+df_stats = df.describe(percentiles=[.1,.25, .5, .75,.90,.99])
+df_stats.loc['Missing Rate'] = 1-df_stats.loc['count']/df.shape[0]
+
 # check categorical variables: what are the unique categories.
 df['category'].unique()
 
