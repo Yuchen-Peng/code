@@ -1,6 +1,9 @@
 from matplotlib import pyplot as plt
 import numpy as np
 %matplotlib inline # always include this in a notebook to display figures in the notebook
+import seaborn as sns
+sns.set() # to give gray background figures
+
 
 # Notation on scatter points
 x=np.random.uniform(0,1,5)
