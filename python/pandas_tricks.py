@@ -91,6 +91,7 @@ df['date_time'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
 df = pd.DataFrame({'A':[1,1,2,2],'B':[1,2,1,2],'values':np.arange(10,30,5)})
 df.groupby('A').agg(np.std)
 value_std = df.groupby('A').agg(np.std)['values'].values # return the std's group by A as an array
+df_count = pd.DataFrame(df.groupby(segment)[col].value_counts()) # value counts of col groupby segment, return result to a dataframe
 
 # Re-order columns
 dict1 = {'a':[1,2],'b':[0,10]}
