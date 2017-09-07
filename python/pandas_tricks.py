@@ -5,6 +5,12 @@ import numpy as np
 # describe stats on a dataframe, let's add more quantile values to show
 df.describe(percentiles=[.1,.25, .5, .75,.90,.99])
 
+# groupby describe, and then stack
+groupby_stats = df[[value,segment]].groupby(segment).describe(percentiles=[.1,.25, .5, .75,.90,.99])
+# This will return segment as the index, value and stats as a multi-index column. 
+# To transfer the stats column to another index, use...
+groupby_stats  = groupby_stats.stack()
+
 # add a new "index" (same as add a new row) to a df: use .loc
 df_stats = df.describe(percentiles=[.1,.25, .5, .75,.90,.99])
 df_stats.loc['Missing Rate'] = 1-df_stats.loc['count']/df.shape[0]
