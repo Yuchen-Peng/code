@@ -48,3 +48,8 @@ for idx in range(len(category_lst)):
     axs[idx//3][idx%3].set_xlabel('value, %s category' %category)
     axs[idx//3][idx%3].set_ylabel('Count')
     plt.show()
+
+# save axe classs to image file (such as xgboost importance figure)
+importance = xgb.plot_importance(fitted,max_num_features=20) # importance is a matplotlib axe object
+fig = importance.get_figure()
+fig.savefig("./images/FS_feature_imp.png",dpi=fig.dpi,bbox_inches='tight', pad_inches=0)
