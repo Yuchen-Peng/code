@@ -161,3 +161,17 @@ ax1.set_ylabel('Frequency')
 scatter = pd.scatter_matrix(X_train, c= y_train, marker = 'o', s=40, hist_kwds={'bins':15}, figsize=(5,5))
 # for continuous variables, here diagnal is kde; alpha is a number between 0 and 1 standing for the transparency of figure. 
 scatter = pd.scatter_matrix(X_train, alpha=0.2, figsize=(6, 6), diagonal='kde')
+
+#pandas .apply()
+#use .apply() to create a new column conditional on existing column
+def province_definition(row):
+    if row['city'] in ['Jinan','Qingdao']:
+        return 'Shandong'
+    elif row['city'] in ['Hangzhou','Ningbo']:
+        return 'Zhejiang'
+    else:
+        return 'I don\'t know'
+
+df['province'] = df.apply(province_definition, axis = 1)
+   
+
