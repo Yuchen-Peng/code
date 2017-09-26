@@ -164,7 +164,7 @@ scatter = pd.scatter_matrix(X_train, c= y_train, marker = 'o', s=40, hist_kwds={
 scatter = pd.scatter_matrix(X_train, alpha=0.2, figsize=(6, 6), diagonal='kde')
 
 # plot multiple hist/kde, group by segment
-fig, axs = plt.subplots(nrows=3, ncols=3,figsize=(20, 16))
+fig, axs = plt.subplots(nrows=3, ncols=3,figsize=(16, 16))
 for idx in range(9):
     df[(df['Cluster']==idx) & (df['target'] < build['target'].quantile(.99))]['target'].plot.hist(bins=10,ax=axs[idx//3][idx%3])
 
