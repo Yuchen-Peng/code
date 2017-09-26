@@ -163,6 +163,15 @@ scatter = pd.scatter_matrix(X_train, c= y_train, marker = 'o', s=40, hist_kwds={
 # for continuous variables, here diagnal is kde; alpha is a number between 0 and 1 standing for the transparency of figure. 
 scatter = pd.scatter_matrix(X_train, alpha=0.2, figsize=(6, 6), diagonal='kde')
 
+# plot multiple hist/kde, group by segment
+fig, axs = plt.subplots(nrows=3, ncols=3,figsize=(20, 16))
+for idx in range(9):
+    df[(df['Cluster']==idx) & (df['target'] < build['target'].quantile(.99))]['target'].plot.hist(bins=10,ax=axs[idx//3][idx%3])
+
+    axs[idx//3][idx%3].set_xlabel('target, cluster = %i' %idx)
+    axs[idx//3][idx%3].set_ylabel('count')
+
+
 #pandas .apply()
 #use .apply() to create a new column conditional on existing column
 def province_definition(row):
