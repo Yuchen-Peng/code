@@ -74,6 +74,7 @@ dtype: float64
  
  df.fillna(0)
  df.fillna(method='ffill') / df.fillna(method='bfill') # Fill gaps forward or backward
+ df.fillna(df.median()/df.mean()) # fill using median/mean
  
  df.dropna()
  df.dropna(how='all') # only drop rows with all data missing
