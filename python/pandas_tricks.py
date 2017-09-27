@@ -5,6 +5,12 @@ import numpy as np
 # describe stats on a dataframe, let's add more quantile values to show
 df.describe(percentiles=[.1,.25, .5, .75,.90,.99])
 
+# set_index
+df = pd.DataFrame(data = a, columns = list_col)
+df['index'] = list_index
+indexed_df = df.set_index(['index'])
+
+
 #basic groupby
 df.groupby('Cluster')[value].mean()
 # groupby describe, and then stack
