@@ -5,6 +5,8 @@ import numpy as np
 # describe stats on a dataframe, let's add more quantile values to show
 df.describe(percentiles=[.1,.25, .5, .75,.90,.99])
 
+#basic groupby
+df.groupby('Cluster')[value].mean()
 # groupby describe, and then stack
 groupby_stats = df[[value,segment]].groupby(segment).describe(percentiles=[.1,.25, .5, .75,.90,.99])
 # This will return segment as the index, value and stats as a multi-index column. 
