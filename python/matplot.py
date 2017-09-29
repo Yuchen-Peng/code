@@ -53,3 +53,12 @@ for idx in range(len(category_lst)):
 importance = xgb.plot_importance(fitted,max_num_features=20) # importance is a matplotlib axe object
 fig = importance.get_figure()
 fig.savefig("./images/FS_feature_imp.png",dpi=fig.dpi,bbox_inches='tight')
+
+# Scatter plot; size of the scatter also depend on data
+# In this example, we scatter income vs spend in each cluster; the size of scatter is the number of people in each cluster.
+plt.figure(figsize=(10,8))
+
+for i in range(1,11):
+    plt.scatter(df_cluster['Income'].loc[i], df_cluster['Spend'].loc[i], s=df_cluster['Count'].loc[i], alpha=0.5, label=i)
+
+
