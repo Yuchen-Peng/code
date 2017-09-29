@@ -61,4 +61,5 @@ plt.figure(figsize=(10,8))
 for i in range(1,11):
     plt.scatter(df_cluster['Income'].loc[i], df_cluster['Spend'].loc[i], s=df_cluster['Count'].loc[i], alpha=0.5, label=i)
 
-
+plt.xlabel("Average of Income in each cluster")
+plt.ylabel("Average of Spend in each cluster")
