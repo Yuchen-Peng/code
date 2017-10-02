@@ -47,6 +47,10 @@ bin_count = df_ben["A"].value_counts(bins = bins) # here bins is the bins create
 # available for pandas version >= 0.20.0
 bin_count = pd.qcut(df[var],5,duplicates='drop').value_counts(sort=False)
 
+#create a new column as a "bucket" column using an existing column's value
+df['bins_value'] = pd.qcut(df['value'], 10, labels=False)
+
+
 # object / str missing to float
  s
 Out[11]: 
