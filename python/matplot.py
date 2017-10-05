@@ -1,6 +1,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 %matplotlib inline # always include this in a notebook to display figures in the notebook
+%matplotlib notebook # this will activate an interactive plot mode
 import seaborn as sns
 sns.set() # to give gray background figures
 
