@@ -9,7 +9,11 @@ df.describe(percentiles=[.1,.25, .5, .75,.90,.99])
 df = pd.DataFrame(data = a, columns = list_col)
 df['index'] = list_index
 indexed_df = df.set_index(['index'])
+#or
+df = pd.DataFrame(data = a, columns = list_col, index = list_index)
 
+# sort by column value
+df_imp = df_imp.sort_values(by = 'Importance', ascending=False)
 
 #basic groupby
 df.groupby('Cluster')[value].mean()
