@@ -16,6 +16,7 @@ sudo yum list installed | grep bzip2
 sudo yum install wget
 sudo yum install bzip2
 sudo yum install nano
+sudo yum install mesa-libGL.x86_64 # for matplotlib.pyplot
 
 #anaconda
 #check https://repo.continuum.io/archive/index.html
