@@ -27,9 +27,10 @@ source ~/.bashrc
 which python
 
 #xgboost
-sudo yum install gcc gcc-c++ libXt-devel cairo-devel pango-devel pango libpng-devel curl-devel unixODBC-devel python-devel java-1.7.0-openjdk-devel bzip2
+sudo yum install gcc gcc-c++ libXt-devel cairo-devel pango-devel pango libpng-devel curl-devel unixODBC-devel python-devel java-1.7.0-openjdk-devel bzip2 --skip-broken
 
-pip install xgboost
+git clone --recursive https://github.com/dmlc/xgboost
+cd xgboost; make -j4
 
 #packages
 pip install pyodbc==3.0.10 # should work on AWS for Python 3
