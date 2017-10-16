@@ -43,6 +43,7 @@ pip install tabulate
 pip install scikit-learn
 pip install http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/1/Python/h2o-3.10.4.1-py2.py3-none-any.whl
 pip install h2o --upgrade
+conda install pymc3 #py bayesian
 
 import pandas as pd
 import xgboost
