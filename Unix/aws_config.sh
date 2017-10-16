@@ -27,7 +27,7 @@ source ~/.bashrc
 
 which python
 
-#xgboost
+#xgboost (make sure rhel7 above)
 sudo yum install gcc gcc-c++ libXt-devel cairo-devel pango-devel pango libpng-devel curl-devel unixODBC-devel python-devel java-1.7.0-openjdk-devel bzip2 --skip-broken
 
 git clone --recursive https://github.com/dmlc/xgboost
