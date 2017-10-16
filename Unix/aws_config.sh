@@ -54,15 +54,3 @@ pip install http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/1/Python/h2o-3.10.4
 pip install h2o --upgrade
 python3 -m pip install tensorflow # tensorflow
 conda install pymc3 #py bayesian
-
-import pandas as pd
-import xgboost
-import pyodbc
-import psycopg2
-import sqlalchemy
-import hubble
-import requests
-import tabulate
-import sklearn
-import h2o
-import seaborn as sns
