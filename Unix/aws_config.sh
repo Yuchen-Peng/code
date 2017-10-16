@@ -45,7 +45,7 @@ pip install requests
 pip install tabulate
 pip install scikit-learn --upgrade
 pip install matplotlib --upgrade
-pip install seaborn
+pip install seaborn --upgrade
 
 #h2o (add --user after pip might work if other breaks down, e.g. pip install package --user)
 #other learning tools
