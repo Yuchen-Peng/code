@@ -33,6 +33,7 @@ gcc --version # verision > 4.7
 
 git clone --recursive https://github.com/dmlc/xgboost
 cd xgboost; make -j4
+cd python-package; sudo python setup.py install
 
 #packages
 pip install pyodbc==3.0.10 # should work on AWS for Python 3
