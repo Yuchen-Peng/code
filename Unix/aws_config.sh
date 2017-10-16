@@ -39,13 +39,14 @@ cd python-package; sudo python setup.py install
 pip install pyodbc==3.0.10 # should work on AWS for Python 3
 conda install psycopg2
 pip install sqlalchemy-redshift
+pip install requests
+pip install tabulate
+pip install scikit-learn --upgrade
 pip install matplotlib --upgrade
 pip install seaborn
 
 #h2o (add --user after pip might work if other breaks down, e.g. pip install package --user)
-pip install requests
-pip install tabulate
-pip install scikit-learn
+#other learning tools
 pip install http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/1/Python/h2o-3.10.4.1-py2.py3-none-any.whl
 pip install h2o --upgrade
 python3 -m pip install tensorflow # tensorflow
