@@ -37,6 +37,7 @@ cd xgboost; make -j4
 pip install pyodbc==3.0.10 # should work on AWS for Python 3
 conda install psycopg2
 pip install sqlalchemy-redshift
+pip install matplotlib --upgrade
 pip install seaborn
 
 #h2o (add --user after pip might work if other breaks down, e.g. pip install package --user)
