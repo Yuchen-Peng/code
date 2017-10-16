@@ -9,7 +9,7 @@ source ~/.bash_profile
 
 proxy_on
 
-#tool
+#tool (yum is the command for apt-get on AWS linux)
 sudo yum list installed | grep wget
 sudo yum list installed | grep bzip2
 
