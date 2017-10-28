@@ -1,6 +1,7 @@
 # Logon to EC2 
 
 ssh -i  ~/.ssh/aws-key  ec2-user@[private ip address without bracket]
+#ssh -i /path/my-key-pair.pem ec2-user@public_dns_name
 
 # Move data to EC2
 
