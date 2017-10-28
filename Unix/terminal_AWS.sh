@@ -17,7 +17,7 @@ scp -i ~/.ssh/aws-key ec2-user@10.205.75.216:~/data/mytable.csv ~/Documents/
 
 # Move data from S3 to EBS
 
-aws s3 cp s3://lzq857-bucket/datafile.csv data/datafile.csv
+aws s3 cp s3://bucket_name/datafile.csv data/datafile.csv
 
 # Open jupyter notebook
 
