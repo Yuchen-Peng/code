@@ -22,6 +22,12 @@ git commit -m "New Commit"
 
 git push # to push from local to github
 
+# sometimes this fails by giving the error message remote: Invalid username or password.
+# then run
+git push origin master
+# should ask for the correct username and password
+
+
 git status # to check repo status
 
 # to sync a forked repo from the original repo
