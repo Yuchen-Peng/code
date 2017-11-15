@@ -1,4 +1,4 @@
-for filename in *.txt
+for filename in file_*.txt
 do 
   rm $filename
 done
